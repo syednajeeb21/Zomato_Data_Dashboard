@@ -24,7 +24,7 @@ if selected_country == 'Overall':
         st.subheader(count)
     st.header("Expensive Pie Chart Ratio Overall")
     ch = df['Expensive'].value_counts().reset_index()
-    fig = px.pie(ch, values = 'count', names = 'Expensive')
+    fig = px.pie(ch, values = 'Expensive', names = 'index')
     st.plotly_chart(fig)
     with col3:
         st.subheader('Distribution of Restaurants as per their Ratings')
